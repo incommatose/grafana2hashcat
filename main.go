@@ -112,6 +112,6 @@ func main() {
 	fmt.Printf("    Successfully converted: %d\n", successCount)
 	fmt.Printf("    Failed conversions: %d\n", lineCount-successCount)
 	fmt.Printf("\nYou can use the #10900 mode in hashcat!\n")
-  fmt.Printf("\nExample: hashcat -m 10900 out_hashes.txt -a 0 /usr/share/wordlists/rockyou.txt -O\n")
+  	fmt.Printf("\nExample: hashcat -m 10900 out_hashes.txt -a 0 /usr/share/wordlists/rockyou.txt -O\n")
 	fmt.Printf("[+] Results saved to: %s\n", outputFile)
 }
