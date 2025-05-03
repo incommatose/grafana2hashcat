@@ -61,7 +61,7 @@ Save hashed passwords in a file as follows
 This is an example of use with a list of hashes with the suggested format in `example_hashes.txt`
 
 ```bash
-grafana2hashcat ../../content/hashes.txt 
+grafana2hashcat grafana_hashes.txt 
 
 [+] Conversion complete:
     Total lines processed: 1
