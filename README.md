@@ -2,7 +2,6 @@
 
 A conversion tool to transform Grafana-style password hashes into Hashcat-compatible format for `Hash Cracking`.
 
-[![Go Report Card](https://goreportcard.com/badge/github.com/incommatose/grafana2hashcat)](https://goreportcard.com/report/github.com/incommatose/grafana2hashcat)
 
 ## Features
 
