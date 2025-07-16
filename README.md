@@ -2,22 +2,23 @@
 
 A conversion tool to transform Grafana-style password hashes into Hashcat-compatible format for `Hash Cracking`.
 
+![Static Badge](https://img.shields.io/badge/Go-1.20%2B-blue?logo=go)
 
-## Features
 
+## ✨ Features
 - Converts Grafana's SHA256 hashes to Hashcat format (`sha256:10000:<salt>:<hash>`)
 - Handles hexadecimal hash decoding and Base64 encoding
 - Batch processing of multiple hashes
 - Lightweight and fast (no external dependencies)
 
-## Installation
+## 🛠️ Installation
 
-### Prerequisites
-- Go 1.20+ (for building from source)
-- Hashed password
-- Salt
+Prerequisites:
+- **Go 1.20+** (for building from source)
+- Hashed password (`hex_hash`)
+- Salt (`salt`)
 
-### Build from source
+## ⛏️ Build from source
 You can build the tool yourself by performing the following steps
 
 ```bash
@@ -34,7 +35,7 @@ sudo mv grafana2hashcat /usr/local/bin/
 ```
 
 
-## Usage
+## 🚀 Usage
 You can see a help panel if you run the script
 
 ~~~ bash
@@ -49,7 +50,7 @@ You can see a help panel if you run the script
   Creates 'out_hashes.txt' with converted hashes in Hashcat format
 ~~~
 
-### Creating Hashed Passwords File
+### 📂 Creating Hashed Passwords File
 Save hashed passwords in a file as follows
 
 ~~~ text
@@ -57,6 +58,7 @@ Save hashed passwords in a file as follows
 441a715bd788e928170be7954b17cb1a:67890
 ~~~
 
+### 🔥 Example
 This is an example of use with a list of hashes with the suggested format in `example_hashes.txt`
 
 ```bash
