@@ -1,17 +1,19 @@
 # Grafana2Hashcat
 
-A conversion tool to transform Grafana-style password hashes into Hashcat-compatible format for `Hash Cracking`.
+_Grafana2Hashcat is a lightweight conversion tool to transform Grafana-style password hashes into Hashcat-compatible format for `Hash Cracking`._
+
 
 ![Static Badge](https://img.shields.io/badge/Go-1.20%2B-blue?logo=go)
 
+Grafana is an open-source analytics and monitoring platform commonly used for visualizing metrics, logs, and dashboards. In modern versions, Grafana stores user passwords by default using the PBKDF2-HMAC-SHA256 algorithm to securely hash credentials before saving them to the database.
 
-# ✨ Features
+## ✨ Features
 - Converts Grafana's SHA256 hashes to Hashcat format (`sha256:10000:<salt>:<hash>`)
 - Handles hexadecimal hash decoding and Base64 encoding
 - Batch processing of multiple hashes
 - Lightweight and fast (no external dependencies)
 
-# 🛠️ Installation
+## 🛠️ Installation
 
 Prerequisites:
 - **Go 1.20+** (for building from source)
@@ -35,7 +37,7 @@ sudo mv grafana2hashcat /usr/local/bin/
 ```
 
 
-# 🚀 Usage
+## 🚀 Usage
 You can see a help panel if you run the script
 
 ~~~ bash
@@ -50,7 +52,7 @@ You can see a help panel if you run the script
   Creates 'out_hashes.txt' with converted hashes in Hashcat format
 ~~~
 
-## 📂 Creating Hashed Passwords File
+### 📂 Creating Hashed Passwords File
 Save hashed passwords in a file as follows
 
 ~~~ text
@@ -58,7 +60,7 @@ Save hashed passwords in a file as follows
 441a715bd788e928170be7954b17cb1a:67890
 ~~~
 
-## 🔥 Example
+### 🔥 Example
 This is an example of use with a list of hashes with the suggested format in `example_hashes.txt`
 
 ```bash
@@ -78,5 +80,3 @@ Example: hashcat -m 10900 out_hashes.txt -a 0 /usr/share/wordlists/rockyou.txt -
 ## 🎯 Hashcat Mode
 
 Use Mode #10900 on hashcat for cracking!
-
-
